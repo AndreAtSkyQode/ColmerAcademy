@@ -1,0 +1,60 @@
+/* CODECADEMY:   Building Websites From Scratch
+   UNIT:         08 (Days 1 - 7)
+   PROJECT:      "Capstone Project: Colmar Academy"
+*/
+
+/*----------------------------------------------------------------------------------------*/
+/* Universal Styles */
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;      /*base font size (1rem = 16px)*/
+}
+
+.main-content {
+  position: relative;
+  top: 5.3125rem;       /* To offset for fixed header. */
+}
+
+.center {
+  text-align: center;
+}
+
+/*
+.button {
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: white;
+}
+*/
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+}
+
+@media only screen and (max-width: 760px) {
+  .main-content {
+    top: 2.5625rem;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/* Header */
+
+@media only screen and (max-width: 760px) { /*for TABLET screens (portrait or landscape orientation)*/
+}
+
+@media only screen and (max-width: 450px) { /*for mobile phone screens (either portrait or landscape orientation)*/
+}
+
+/*----------------------------------------------------------------------------------------*/
+/* ?? */
+
+@media only screen and (max-width: 760px) { /*for TABLET screens (portrait or landscape orientation)*/
+}
+
+@media only screen and (max-width: 450px) { /*for mobile phone screens (either portrait or landscape orientation)*/
+}
