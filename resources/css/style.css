@@ -20,6 +20,14 @@ html {
   text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
+.light-grey {
+  background-color: lightgrey;
+}
+
 /*
 .button {
   border-radius: 4px;
