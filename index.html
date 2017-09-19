@@ -26,15 +26,22 @@
   <!-- Header -->
   <header>
     <div class="content">
+      <!--logo-->
       <div class="logo">
-        <a href="index.html">
-          <div class="image-container">
+        <div class="image-container">
+          <a href="index.html" class="logo-icon">
             <img src="./resources/images/ic-logo.svg" class="icon" alt="The Colmar Logo icon"/>
-          </div>
-          <span>COLMAR</span>
-          <span>ACADEMY</span>
-        </a>
+          </a>
+        </div>
+        <div class="logo-txt">
+          <a href="index.html">
+            <span>COLMAR</span>
+            <span>ACADEMY</span>
+          </a>
+        </div>
       </div>
+
+      <!--desktop nav bar-->
       <nav class="desktop">
         <ul>
           <li><a href="#">On Campus</a></li>
@@ -43,35 +50,40 @@
           <li><a href="#">Sign In</a></li>
         </ul>
       </nav>
+
+      <!--mobile nav bar-->
       <nav class="mobile">
-        <ul>
+        <ul class="">
+          <li><a href="#"><img src="./resources/images/ic-logo.svg" class="icon" alt="The Colmar Logo icon"/></a></li>
           <li><a href="#"><img src="./resources/images/ic-on-campus.svg" class="icon" alt="On campus icon"/></a></li>
           <li><a href="#"><img src="./resources/images/ic-online.svg" class="icon" alt="Online icon"/></a></li>
           <li><a href="#"><img src="./resources/images/ic-login.svg" class="icon" alt="Login icon"/></a></li>
         </ul>
       </nav>
-    </div>
+    </div>  <!--e/o .content-->
   </header>
 
   <!-- Main Content -->
-  <div class="main-content">
+  <section class="main-content">
 
     <!-- Main Banner -->
-    <div id="start-here-section" class="banner light-grey">
-      <div class="image-container">
+    <section id="start-here-section" class="banner light-grey box">
+      <div class="image-container box2">
         <img src="./resources/images/banner.jpg" alt="banner pic" />
       </div>
-      <div class="start-here-cta">
+
+      <!--call to action (cta)-->
+      <div class="start-here-cta box2">
         <div class="content left">
-          <h1 class="header">Learn Something</h1>
-          <h3 class="poem">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-          <div class="button">Start Here</div>
+          <h1>Learn something new everyday</h1>
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+          <div class="button center">Start here</div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Information -->
-    <div id="information-section">
+    <section id="information-section">
 
       <!-- left column -->
       <div class="left-col">
@@ -118,10 +130,10 @@
           </div>
         </div>
       </div>
-    </div>  <!--e/o .information-section-->
+    </section>  <!--e/o .information-section-->
 
     <!-- Courses -->
-    <div id="course-section">
+    <section id="course-section">
       <!--Software Engineering-->
       <div class="course">
         <div class="image-container">
@@ -188,7 +200,7 @@
           <span>Analytics, Content Marketing, Mobile Marketing</span>
         </div>
       </div>
-    </div>  <!--e/o .course-section-->
+    </section>  <!--e/o .course-section-->
 
     <!-- Thesis Exhibition -->
     <div class="thesis-section">
@@ -227,7 +239,7 @@
       </div>  <!--e/o .right-col-->
 
     </div>  <!--e/o .information-section-->
-  </div>  <!--e/o Main Content-->
+  </section>  <!--e/o Main Content-->
 
   <!-- Footer -->
   <footer>

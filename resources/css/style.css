@@ -13,7 +13,7 @@ html {
 
 .main-content {
   position: relative;
-  top: 5.3125rem;       /* To offset for fixed header. */
+  top: 4rem;       /* To offset for fixed header. */
 }
 
 .center {
@@ -32,13 +32,12 @@ html {
   text-transform: capitalize;
 }
 
-/*
 .button {
-  border-radius: 4px;
+  border-radius: 2px;
   background-color: #4a4a4a;
   color: white;
+  padding: 8px 0;
 }
-*/
 
 .image-container {
   overflow: hidden;
@@ -48,13 +47,136 @@ html {
   display: block;
 }
 
-@media only screen and (max-width: 760px) {
-  .main-content {
-    top: 2.5625rem;
-}
-
 /*----------------------------------------------------------------------------------------*/
 /* Header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid lightgrey;
+  background-color: white;
+  z-index: 1;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  flex: 1;   /*flex grow = 1; logo element takes up all available screen width upon widening screen*/
+}
+
+header .logo .image-container {
+  height: 2rem;
+}
+
+header .logo img {
+  height: auto;/*2rem*/
+  width: 2rem;
+}
+
+header .logo-txt {
+  font-size: 1rem;
+}
+
+header .desktop ul {
+  display: flex;
+  align-items: center;
+}
+
+header .desktop li {
+  padding: 0 0.5rem;
+}
+header .desktop li:first-child {
+  padding-left: 0;
+}
+header .desktop li:last-child {
+  padding-right: 0;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  /*for TABLET screens (portrait or landscape orientation)*/
+  header .logo .logo-txt {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  /*for mobile phone screens (either portrait or landscape orientation)*/
+  header .desktop {
+    display: none;
+  }
+
+  header .logo {
+    display: none;
+  }
+
+  header .mobile {    /*mobile navigator*/
+    display: block;
+    width: 100%;      /*mobile navigator to take up full container (parent) width*/
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;  /*space will nicely grow/shrink along with screen width*/
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/*----------------------------------------------------------------------------------------*/
+/* Start Here Section */
+
+#start-here-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#start-here-section .image-container {
+  padding: 2rem 1.5rem;
+  width: 60%;
+  height: auto;
+}
+
+#start-here-section .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.start-here-cta  {
+  margin: auto 0;
+}
+
+.start-here-cta .content {
+  width: 320px;
+}
+
+.start-here-cta h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  padding-bottom: 1.5rem;
+}
+
+.start-here-cta h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  padding-bottom: 1.5rem;
+}
+
+.start-here-cta .button {
+  padding: 0.5rem auto;
+}
+
 
 @media only screen and (max-width: 760px) { /*for TABLET screens (portrait or landscape orientation)*/
 }
@@ -63,10 +185,12 @@ html {
 }
 
 /*----------------------------------------------------------------------------------------*/
-/* ?? */
+/* TROUBLESHOOTING */
 
-@media only screen and (max-width: 760px) { /*for TABLET screens (portrait or landscape orientation)*/
+/*To Outline an item - COMMENT OUT WHEN READY*/
+.box {
+  border: 1px solid red;
 }
-
-@media only screen and (max-width: 450px) { /*for mobile phone screens (either portrait or landscape orientation)*/
+.box2 {
+  border: 1px dotted blue;
 }
