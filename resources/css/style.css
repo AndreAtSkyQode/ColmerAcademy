@@ -153,14 +153,15 @@ header .mobile {
 
 .start-here-cta  {
   margin: auto 0;
+  padding-bottom: 1rem;
 }
 
 .start-here-cta .content {
-  width: 320px;
+  width: 340px;
 }
 
 .start-here-cta h1 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 800;
   line-height: 1.25;
   padding-bottom: 1.5rem;
@@ -168,7 +169,7 @@ header .mobile {
 
 .start-here-cta h3 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
   padding-bottom: 1.5rem;
 }
@@ -177,11 +178,63 @@ header .mobile {
   padding: 0.5rem auto;
 }
 
+@media only screen and (max-width: 1024px) { /*for screens < 1024px wide*/
+  #start-here-section .image-container {
+    width: 50%;
+    /*other properties inherited*/
+  }
+
+  .start-here-cta .content {
+    width: 280px;
+  }
+
+  .start-here-cta h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.25;
+    padding-bottom: 1.5rem;
+  }
+
+  .start-here-cta h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 840px) { /*for screens < 840px wide*/
+  #start-here-section .image-container {
+    width: 45%;
+    /*other properties inherited*/
+  }
+}
 
 @media only screen and (max-width: 760px) { /*for TABLET screens (portrait or landscape orientation)*/
+  #start-here-section {
+    display: block;
+  }
+
+  #start-here-section .image-container {
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .start-here-cta .content {
+    margin: 2rem auto;
+    /*width: auto;*/
+  }
 }
 
 @media only screen and (max-width: 450px) { /*for mobile phone screens (either portrait or landscape orientation)*/
+  .start-here-cta .content {
+    margin: 2rem auto;
+    width: auto;
+    min-width: 200px;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
 }
 
 /*----------------------------------------------------------------------------------------*/
