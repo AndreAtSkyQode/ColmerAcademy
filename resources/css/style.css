@@ -48,6 +48,18 @@ html {
   display: block;
 }
 
+.quote::before { /*use pseudo-element ::before to place quotation sign BEFORE the element */
+  content: '"';
+  /*font-size: 100%;*/
+  font-style: italic;
+}
+
+.quote::after { /*use pseudo-element ::before to place quotation sign AFTER the element */
+  content: '"';
+  /*font-size: 100%;*/
+  font-style: italic;
+}
+
 /*----------------------------------------------------------------------------------------*/
 /* Header
    ------ */
@@ -314,6 +326,7 @@ header .mobile {
 
 #information-section {
   display: flex;
+  flex-wrap: nowrap;
 }
                                 /** left column **/
 #information-section .left-col {
@@ -332,26 +345,28 @@ header .mobile {
 }
 
 #information-section .left-col .content {
-  padding: 2rem 0;
+  padding: 2rem 1.5rem;
 }
 
 #information-section .left-col h2 {
   font-size: 1.75rem;
   font-weight: 800;
   line-height: 1.25;
-  padding: 0;
+  padding-bottom: 1.5rem;
 }
 
-#information-section .left-col span:first-child {
+#information-section .left-col span {
   display: block;
-  font-size: 0.75rem;
-  line-height: 1.25;
-  padding: 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-bottom: 1.5rem;
 }
 
 #information-section .left-col span:last-child {
   display: block;
-  font-size: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 600;
   padding: 0;
 }
                                 /** right column **/
