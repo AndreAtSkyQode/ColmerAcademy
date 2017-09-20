@@ -102,14 +102,14 @@ header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
   /*for TABLET screens (portrait or landscape orientation)*/
   header .logo .logo-txt {
     display: none;
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 480px) {
   /*for mobile phone screens (either portrait or landscape orientation)*/
   header .desktop {
     display: none;
@@ -210,7 +210,7 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 760px) { /*for TABLET screens (portrait or landscape orientation)*/
+@media only screen and (max-width: 768px) { /*for TABLET screens (portrait or landscape orientation)*/
   #start-here-section {
     display: block;
   }
@@ -222,12 +222,16 @@ header .mobile {
   }
 
   .start-here-cta .content {
+    width: 340px;
+  }
+  
+  .start-here-cta .content {
     margin: 2rem auto;
     /*width: auto;*/
   }
 }
 
-@media only screen and (max-width: 450px) { /*for mobile phone screens (either portrait or landscape orientation)*/
+@media only screen and (max-width: 480px) { /*for mobile phone screens (either portrait or landscape orientation)*/
   .start-here-cta .content {
     margin: 2rem auto;
     width: auto;
