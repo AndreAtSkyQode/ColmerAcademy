@@ -133,31 +133,40 @@ header .mobile {
 }
 
 /*----------------------------------------------------------------------------------------*/
-/* Start Here Section */
+/* BANNER / Start Here Section */
 
 #start-here-section {
   display: flex;
-  justify-content: flex-start;
+  /*justify-content: flex-start;*/
+  align-items: center;
+}
+                                /** left column **/
+#start-here-section .left-col {
+  width: 60%;
+  padding: 2rem 1.5rem;
 }
 
 #start-here-section .image-container {
-  padding: 2rem 1.5rem;
-  width: 60%;
-  height: auto;
+  max-width: 100%;    /*full width of parent container*/
 }
 
 #start-here-section .image-container img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%;  /*full width of parent container*/
+  height: auto;     /*height adjusted automatically to width, to main aspect ratio*/
+}
+
+                                /** right column **/
+#start-here-section .right-col {
+  width: 40%;
 }
 
 .start-here-cta  {
-  margin: auto 0;
-  padding-bottom: 1rem;
+  max-width: 100%;
+  padding: 1rem;
 }
 
 .start-here-cta .content {
-  width: 340px;
+  max-width: 340px;
 }
 
 .start-here-cta h1 {
@@ -178,14 +187,11 @@ header .mobile {
   padding: 0.5rem auto;
 }
 
-@media only screen and (max-width: 1024px) { /*for screens < 1024px wide*/
-  #start-here-section .image-container {
-    width: 50%;
-    /*other properties inherited*/
-  }
+                                /** media queries **/
 
+@media only screen and (max-width: 1024px) {
   .start-here-cta .content {
-    width: 280px;
+    max-width: 280px;
   }
 
   .start-here-cta h1 {
@@ -203,16 +209,40 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 840px) { /*for screens < 840px wide*/
+@media only screen and (max-width: 840px) {
+  /*
   #start-here-section .image-container {
     width: 45%;
-    /*other properties inherited*/
+  }
+  */
+  .start-here-cta h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.25;
+    padding-bottom: 1.5rem;
+  }
+
+  .start-here-cta h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 1.5rem;
   }
 }
 
-@media only screen and (max-width: 768px) { /*for TABLET screens (portrait or landscape orientation)*/
+@media only screen and (max-width: 768px) { /*no more left/right columns - to stretch full screen width*/
   #start-here-section {
     display: block;
+  }
+
+  #start-here-section .left-col { /*left column now block item (full screen width)*/
+    width: 100%;
+    padding: 0;
+  }
+
+  #start-here-section .right-col { /*right column now block item (full screen width)*/
+    width: 100%;
+    padding: 0;
   }
 
   #start-here-section .image-container {
@@ -222,23 +252,104 @@ header .mobile {
   }
 
   .start-here-cta .content {
-    width: 340px;
+    max-width: 340px;
   }
-  
+
   .start-here-cta .content {
     margin: 2rem auto;
-    /*width: auto;*/
   }
+
+  .start-here-cta h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.25;
+    padding-bottom: 1.5rem;
+  }
+
+  .start-here-cta h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-bottom: 1.5rem;
+  }
+
 }
 
-@media only screen and (max-width: 480px) { /*for mobile phone screens (either portrait or landscape orientation)*/
+@media only screen and (max-width: 480px) {
+  .start-here-cta {
+    display: block;
+    padding: 0;
+  }
+
   .start-here-cta .content {
-    margin: 2rem auto;
-    width: auto;
-    min-width: 200px;
     text-align: center;
+    max-width: 100%;
     padding: 0 1.5rem;
   }
+
+  .start-here-cta h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.25;
+    padding-bottom: 1.5rem;
+  }
+
+  .start-here-cta h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 1.5rem;
+  }
+}
+*/
+
+/*----------------------------------------------------------------------------------------*/
+/* Information */
+
+#information-section {
+  display: flex;
+}
+                                /** left column **/
+#information-section .left-col {
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+#information-section .left-col .image-container {
+  max-width: 100%;  /*image-container takes up full width of .left-col container*/
+}
+
+#information-section .left-col img {
+  max-width: 100%;
+  height: auto;
+}
+
+#information-section .left-col .content {
+  padding: 2rem 0;
+}
+
+#information-section .left-col h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.25;
+  padding: 0;
+}
+
+#information-section .left-col span:first-child {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  padding: 1.5rem 0;
+}
+
+#information-section .left-col span:last-child {
+  display: block;
+  font-size: 0.5rem;
+  padding: 0;
+}
+                                /** right column **/
+#information-section .right-col {
+  width: 40%;
 }
 
 /*----------------------------------------------------------------------------------------*/
