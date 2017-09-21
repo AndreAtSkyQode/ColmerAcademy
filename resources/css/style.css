@@ -301,7 +301,7 @@ header .mobile {
   .start-here-cta .content {
     text-align: center;
     max-width: 100%;
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
   }
 
   .start-here-cta h1 {
@@ -318,7 +318,6 @@ header .mobile {
     padding-bottom: 1.5rem;
   }
 }
-*/
 
 /*----------------------------------------------------------------------------------------*/
 /* Information
@@ -326,17 +325,16 @@ header .mobile {
 
 #information-section {
   display: flex;
-  flex-wrap: nowrap;
 }
                                 /** left column **/
 #information-section .left-col {
   width: 60%;
-  /*padding: 2rem 1.5rem;*/
+  border-right: 1px solid lightgrey;
 }
 
 #information-section .left-col .image-container {
   max-width: 100%;  /*image-container takes up full width of .left-col container*/
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 #information-section .left-col .image-container img {
@@ -345,7 +343,7 @@ header .mobile {
 }
 
 #information-section .left-col .content {
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 #information-section .left-col h2 {
@@ -371,9 +369,190 @@ header .mobile {
 }
                                 /** right column **/
 #information-section .right-col {
-  width: 40%;
+    width: 40%;
 }
 
+#information-section .right-col .item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  padding-right: 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+#information-section .right-col .item:first-child {
+  margin-top: 1rem;
+}
+
+#information-section .right-col .item .image-container {
+  width: 35%;
+}
+
+#information-section .right-col .item img {
+  max-width: 100%;
+  height: auto;
+}
+
+#information-section .right-col .item img.mobile {  /*mobile image hidden*/
+  display: none;
+}
+
+#information-section .right-col .item .content {
+  width: 65%;
+  padding: 0 1.5rem;
+}
+
+#information-section .right-col .item .content h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.35;
+  padding-bottom: .5rem;
+}
+
+#information-section .right-col .item .content span {
+  display: block;
+  font-size: .95rem;
+  line-height: 1.25;
+  padding-bottom: .5rem;
+}
+
+#information-section .right-col .item .content span.read-more {
+  color: blue;
+}
+
+                                    /** media queries **/
+@media only screen and (max-width: 1024px) {
+  #information-section .left-col h2 {
+    font-size: 1.55rem;
+    font-weight: 800;
+  }
+
+  #information-section .left-col span {
+    font-size: 0.9rem;
+    /*line-height: 1.5;
+    padding-bottom: 1.5rem;*/
+  }
+
+  #information-section .left-col span:last-child {
+    font-size: 0.7rem;
+  }
+
+  #information-section .right-col .item .content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-bottom: .35rem;
+  }
+
+  #information-section .right-col .item .content span {
+    font-size: .85rem;
+    line-height: 1.15;
+    padding-bottom: .3rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  #information-section .left-col h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+  }
+
+  #information-section .right-col .item .content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.15;
+    padding-bottom: .3rem;
+  }
+
+  #information-section .right-col .item .content span {
+    font-size: .75rem;
+    /*line-height: 1.15;
+    padding-bottom: .3rem;*/
+  }
+}
+
+@media only screen and (max-width: 768px) { /*no more left/right columns - to stretch full screen width*/
+  #information-section .left-col {  /*left column hidden (and no space reserved)*/
+    display: none;
+  }
+
+  #information-section .right-col { /*right column full screen width*/
+      /*display: block;*/
+      width: 100%;
+  }
+
+  #information-section .right-col .item .content h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.35;
+    padding-bottom: .5rem;
+  }
+
+  #information-section .right-col .item .content span {
+    display: block;
+    font-size: .95rem;
+    line-height: 1.25;
+    padding-bottom: .5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #information-section .right-col .item {
+    border-bottom: none;
+    display: block;
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+
+  #information-section .right-col .item:first-child {
+    /*margin-top: 1rem;*/
+    margin: 0;
+  }
+
+  #information-section .right-col .item:last-child {
+    background-color: white;
+  }
+
+  #information-section .right-col .item .image-container {
+    width: 100%;
+  }
+
+  #information-section .right-col .item img.mobile {  /*display mobile image*/
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  #information-section .right-col .item img.desktop { /*hide desktop image*/
+    display: none;
+  }
+
+  #information-section .right-col .item .content {
+    width: 65%;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/*----------------------------------------------------------------------------------------*/
+/* ???
+   --------------- */
+
+                                      /** media queries **/
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 840px) {
+
+}
+
+@media only screen and (max-width: 768px) { /*no more left/right columns - to stretch full screen width*/
+
+}
+
+@media only screen and (max-width: 480px) {
+
+}
 /*----------------------------------------------------------------------------------------*/
 /* TROUBLESHOOTING */
 
