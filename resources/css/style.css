@@ -227,11 +227,6 @@ header .mobile {
 }
 
 @media only screen and (max-width: 840px) {
-  /*
-  #start-here-section .image-container {
-    width: 45%;
-  }
-  */
   .start-here-cta h1 {
     font-size: 1.5rem;
     font-weight: 800;
@@ -432,7 +427,7 @@ header .mobile {
   padding-bottom: .5rem;
 }
 
-#information-section .right-col .item .content span.read-more {
+#information-section .right-col .item .content span.read-more a {
   color: blue;
 }
 
