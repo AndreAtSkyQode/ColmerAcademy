@@ -344,6 +344,7 @@ header .mobile {
 
 #information-section .left-col .content {
   padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
 }
 
 #information-section .left-col h2 {
@@ -494,6 +495,10 @@ header .mobile {
     line-height: 1.25;
     padding-bottom: .5rem;
   }
+
+  #information-section .right-col .item:last-child {
+    margin-bottom: 2rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -502,6 +507,7 @@ header .mobile {
     display: block;
     margin: 0;
     padding: 0 1.5rem;
+    border-bottom: 1px solid lightgrey;
   }
 
   #information-section .right-col .item:first-child {
@@ -511,6 +517,7 @@ header .mobile {
 
   #information-section .right-col .item:last-child {
     background-color: white;
+    margin-bottom: 0;
   }
 
   #information-section .right-col .item .image-container {
@@ -534,6 +541,121 @@ header .mobile {
 }
 
 /*----------------------------------------------------------------------------------------*/
+/* Courses
+   --------------- */
+#course-section {
+  padding: 0 4rem 2rem 4rem;
+}
+
+#course-section .heading h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 2rem 0;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course {
+  max-width: 29%;
+  margin: 0 1rem 1rem 1rem;
+  background-color: white;
+}
+
+.course .image-container {
+  width: 100%;
+}
+
+.course .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.course .content {
+  padding: 1rem;
+}
+
+.course .content h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.35;
+  padding-bottom: .5rem;
+}
+
+.course .content span {
+  display: block;
+  font-size: .95rem;
+  line-height: 1.25;
+  padding-bottom: .5rem;
+  color: grey;
+}
+
+
+                                      /** media queries **/
+@media only screen and (max-width: 1024px) {
+  .course {
+    max-width: 28%;
+  }
+
+  .course .content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    padding-bottom: .35rem;
+  }
+
+  .course .content span {
+    font-size: .8rem;
+    line-height: 1.15;
+    padding-bottom: .3rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .course {
+    max-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) { /*no more left/right columns - to stretch full screen width*/
+  .course .content .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #course-section {
+    padding: 0 1rem 2rem 1rem;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+  }
+  .courses {
+    display: block;
+  }
+
+  .course {
+    background-color: lightgrey;
+    margin: 0 0 .5rem 0;
+    max-width: 100%;
+  }
+
+  .course .content h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.35;
+    padding-bottom: .5rem;
+  }
+
+  .course .desktop {
+    display: none;
+  }
+}
+
+/*----------------------------------------------------------------------------------------*/
 /* ???
    --------------- */
 
@@ -553,6 +675,7 @@ header .mobile {
 @media only screen and (max-width: 480px) {
 
 }
+
 /*----------------------------------------------------------------------------------------*/
 /* TROUBLESHOOTING */
 
